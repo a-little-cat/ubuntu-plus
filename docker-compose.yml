@@ -1,0 +1,16 @@
+version: "3"
+services:
+  ubuntuplus:
+    container_name: ubuntuplus
+    image: ubuntuplus
+    ports:
+      - "10023:22"
+    hostname: "dev-docker"
+    stdin_open: true
+    tty: true
+    volumes:
+      - ~/.ssh:/home/user/.ssh
+      - .zshrc:/home/user/.zshrc
+      - ./code:/home/user/code
+      - .zsh_history:/home/user/.zsh_history
+      - ./vsix:/home/user/vsix
