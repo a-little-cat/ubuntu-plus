@@ -11,6 +11,9 @@ services:
     volumes:
       - ~/.ssh:/home/user/.ssh
       - .zshrc:/home/user/.zshrc
-      - ./code:/home/user/code
       - .zsh_history:/home/user/.zsh_history
-      - ./vsix:/home/user/vsix
+      - ./code:/home/user/code
+    cap_add:
+      - ALL
+    security_opt:
+      - seccomp:unconfined
