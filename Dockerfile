@@ -25,7 +25,7 @@ RUN apt update -qq && apt upgrade -qqy && \
 USER user
 WORKDIR /home/user
 
-ARG COMMIT_ID=d2e414d9e4239a252d1ab117bd7067f125afd80a
+ARG COMMIT_ID=fcac248b077b55bae4ba5bab613fd6e9156c2f0c
 RUN mkdir -p ~/.ssh && \
     chmod 700 ~/.ssh && \
     git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh && \
