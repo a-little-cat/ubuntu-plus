@@ -13,7 +13,7 @@ LABEL maintainer cat
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt update -qq && apt upgrade -qqy && \
-    apt install -qqy sudo git zsh openssh-server gcc g++ cmake make gdb clang unzip libopencv-dev&& \
+    apt install -qqy sudo git zsh openssh-server gcc g++ cmake cmake-gui make gdb clang unzip libopencv-dev&& \
     apt clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     mkdir /var/run/sshd && \

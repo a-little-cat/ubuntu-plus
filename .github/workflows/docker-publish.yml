@@ -34,4 +34,4 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/ubuntuplus:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/ubuntuplus:1.1
+            ${{ secrets.DOCKERHUB_USERNAME }}/ubuntuplus:1.2
