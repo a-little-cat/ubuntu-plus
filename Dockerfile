@@ -13,7 +13,7 @@ LABEL maintainer cat
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt update -qq && apt upgrade -qqy && \
-    apt install -qqy sudo git zsh openssh-server gcc g++ cmake cmake-gui make gdb clang unzip libopencv-dev&& \
+    apt install -qqy sudo git zsh openssh-server gcc g++ cmake cmake-gui make gdb clang unzip libopencv-dev tldr&& \
     apt clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     mkdir /var/run/sshd && \
@@ -36,7 +36,9 @@ RUN mkdir -p ~/.ssh && \
     wget https://update.code.visualstudio.com/commit:$COMMIT_ID/server-linux-x64/stable -O  ~/.vscode-server/bin/$COMMIT_ID/vscode-server-linux-x64.tar.gz && \
     cd ~/.vscode-server/bin/$COMMIT_ID && \
     tar -xvzf vscode-server-linux-x64.tar.gz --strip-components 1 && \
-    rm ~/.vscode-server/bin/$COMMIT_ID/vscode-server-linux-x64.tar.gz
+    rm ~/.vscode-server/bin/$COMMIT_ID/vscode-server-linux-x64.tar.gz && \
+    mkdir -p ~/.tldr && \
+    git clone git@github.com:tldr-pages/tldr.git ~/.tldr/tldr
 
 
 ENV TZ=Asia/Shanghai \
