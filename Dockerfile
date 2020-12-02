@@ -38,7 +38,7 @@ RUN mkdir -p ~/.ssh && \
     tar -xvzf vscode-server-linux-x64.tar.gz --strip-components 1 && \
     rm ~/.vscode-server/bin/$COMMIT_ID/vscode-server-linux-x64.tar.gz && \
     mkdir -p ~/.tldr && \
-    git clone git@github.com:tldr-pages/tldr.git ~/.tldr/tldr
+    git clone https://github.com/tldr-pages/tldr.git ~/.tldr/tldr
 
 
 ENV TZ=Asia/Shanghai \
