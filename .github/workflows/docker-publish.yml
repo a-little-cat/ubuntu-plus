@@ -31,4 +31,3 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/ubuntuplus:tensorrt
-            #${{ secrets.DOCKERHUB_USERNAME }}/ubuntuplus:latest
