@@ -33,10 +33,7 @@ RUN mkdir -p ~/.ssh && \
     git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh && \
     git clone https://github.com/sindresorhus/pure.git "$HOME/.oh-my-zsh/themes/pure" && \
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting && \
-    cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc && \
-    mkdir -p ~/.tldr && \
-    git clone https://github.com/tldr-pages/tldr.git ~/.tldr/tldr
-
+    cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 ENV TZ=Asia/Shanghai \
     LANG=C.UTF-8

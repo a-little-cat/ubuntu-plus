@@ -4,3 +4,4 @@ autoload -U promptinit; promptinit
 prompt pure
 plugins=(extract zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
+setopt rmstarsilent

@@ -4,12 +4,14 @@ services:
     container_name: ubuntuplus
     image: ubuntuplus
     ports:
-      - "10023:22"
+      - "23:22"
     hostname: "dev-docker"
     stdin_open: true
     tty: true
     volumes:
-      - ~/.ssh:/home/user/.ssh
+      - .ssh:/home/user/.ssh
+      - .tldr:/home/user/.tldr
+      - .vscode-server:/home/user/.vscode-server
       - .zshrc:/home/user/.zshrc
       - .zsh_history:/home/user/.zsh_history
       - ./code:/home/user/code
@@ -17,3 +19,8 @@ services:
       - ALL
     security_opt:
       - seccomp:unconfined
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      - UMASK_SET=<022> #optional
