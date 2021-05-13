@@ -13,11 +13,11 @@ LABEL maintainer cat
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt update -qq && apt upgrade -qqy && \
-    apt install -qqy sudo git zsh openssh-server cmake-gui clang unzip libopencv-dev protobuf-compiler libprotobuf-dev tldr python3-pip && \
+    apt install -qqy sudo git zsh openssh-server cmake-gui clang unzip libopencv-dev protobuf-compiler libprotobuf-dev tldr python3-pip python3-dev python3-venv && \
     apt clean && \
     pip3 install -U pip && \
     pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html && \
-    pip3 install tensorflow==1.15.0 pandas mxnet-cu102 opencv numpy pillow onnx-simplifier && \
+    pip3 install pandas mxnet-cu102 opencv-python numpy pillow onnx-simplifier && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache/pip && \
     mkdir /var/run/sshd && \
     useradd -m -G sudo -s /usr/bin/zsh user && \
