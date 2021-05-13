@@ -30,4 +30,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/ubuntuplus:tensorrt
+            ${{ secrets.DOCKERHUB_USERNAME }}/ubuntuplus:1.4
+            ${{ secrets.DOCKERHUB_USERNAME }}/ubuntuplus:latest
