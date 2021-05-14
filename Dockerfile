@@ -17,7 +17,7 @@ RUN apt update -qq && apt upgrade -qqy && \
     apt clean && \
     pip3 install -U pip && \
     pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html && \
-    pip3 install pandas mxnet-cu102 opencv-python numpy pillow onnx-simplifier && \
+    pip3 install pandas mxnet-cu102 opencv-python numpy pillow onnx-simplifier autopep8 && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache/pip && \
     mkdir /var/run/sshd && \
     useradd -m -G sudo -s /usr/bin/zsh user && \
