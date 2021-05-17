@@ -13,7 +13,7 @@ LABEL maintainer cat
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt update -qq && apt upgrade -qqy && \
-    apt install -qqy sudo git zsh openssh-server cmake-gui clang unzip libopencv-dev protobuf-compiler libprotobuf-dev tldr python3-pip python3-dev python3-venv gdb && \
+    apt install -qqy sudo git zsh openssh-server cmake-gui clang unzip libopencv-dev protobuf-compiler libprotobuf-dev tldr python3-pip python3-dev python3-venv gdb ffmpeg htop&& \
     apt clean && \
     pip3 install -U pip && \
     pip3 install pandas mxnet-cu102 opencv-python numpy pillow onnx-simplifier autopep8 && \
