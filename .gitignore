@@ -2,3 +2,5 @@
 .vscode-server
 .tldr
 .zsh_history
+.oh-my-zsh
+.zsh_rc

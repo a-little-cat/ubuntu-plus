@@ -3,3 +3,5 @@
 	name = cat
 [core]
 	fileMode = false
+[icdiff]
+	options = --highlight --line-numbers

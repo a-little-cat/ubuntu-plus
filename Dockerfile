@@ -13,7 +13,7 @@ LABEL maintainer cat
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt update -qq && apt upgrade -qqy && \
-    apt install -qqy sudo git zsh openssh-server cmake-gui clang unzip libopencv-dev protobuf-compiler libprotobuf-dev tldr python3-pip python3-dev python3-venv gdb ffmpeg htop&& \
+    apt install -qqy sudo git zsh openssh-server cmake-gui clang unzip libopencv-dev protobuf-compiler libprotobuf-dev tldr python3-pip python3-dev python3-venv gdb ffmpeg htop icdiff&& \
     apt clean && \
     pip3 install -U pip && \
     pip3 install pandas mxnet-cu102 opencv-python numpy pillow onnx-simplifier autopep8 && \
@@ -28,11 +28,7 @@ USER user
 WORKDIR /home/user
 
 RUN mkdir -p ~/.ssh && \
-    chmod 700 ~/.ssh && \
-    git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh && \
-    git clone https://github.com/sindresorhus/pure.git "$HOME/.oh-my-zsh/themes/pure" && \
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting && \
-    cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+    chmod 700 ~/.ssh
 
 ENV TZ=Asia/Shanghai \
     LANG=C.UTF-8

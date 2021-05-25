@@ -13,6 +13,7 @@ services:
       - .ssh:/home/user/.ssh
       - .zshrc:/home/user/.zshrc
       - .zsh_history:/home/user/.zsh_history
+      - .oh-my-zsh:/home/user/.oh-my-zsh
       - .tldr:/home/user/.tldr
       - .vscode-server:/home/user/.vscode-server
       - .gitconfig:/home/user/.gitconfig
