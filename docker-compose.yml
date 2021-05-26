@@ -17,7 +17,8 @@ services:
       - .tldr:/home/user/.tldr
       - .vscode-server:/home/user/.vscode-server
       - .gitconfig:/home/user/.gitconfig
-      - ../../project:/home/user/code
+      - ~/project:/home/user/code
+      - ~/data:/home/user/data
     cap_add:
       - ALL
     security_opt:
