@@ -5,3 +5,4 @@ prompt pure
 plugins=(extract zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 setopt rmstarsilent
+alias python=python3
